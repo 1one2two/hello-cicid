@@ -1,5 +1,15 @@
-machine:
-  node:
-    version: 8.10.0
-  test:
-    - npm test
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/hello-cicd
+    docker:
+      - image: circleci/node:10.16.3
+      - image: mongo:4.2.0
+    steps:
+      - checkout
+      - run:
+        name: str
+        command: 'npm start'
+      - run:
+        name: test
+        command: npm test
