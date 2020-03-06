@@ -1,5 +1,5 @@
 machine:
-	node:
-		version: v8.10.0
-	test:
-		- npm test
+    node:
+        version: v8.10.0
+    test:
+        - npm test
